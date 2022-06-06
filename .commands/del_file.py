@@ -9,14 +9,13 @@ def del_file(args):
         exit(0)
 
     file_name = Path(args[1]).name
+    file_path = f'../.zeon_fs2/{file_name}'
 
-    path = ".zeon_fs2/" + file_name
-
-    if not Path(path).is_file():
+    if not Path(file_path).exists():
         print('Такой файл не существует')
         exit(0)
 
-    os.remove(path)
+    os.remove(file_path)
 
 
 if __name__ == '__main__':

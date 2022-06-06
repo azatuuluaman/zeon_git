@@ -18,3 +18,47 @@ if args[1] == 'del':
 if args[1] == 'list':
     print('Вызвали list')
     os.system("python list_files.py")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# import os
+# import sys
+# from list_files import list_files
+#
+# .commands = {
+#     "list": list_files,
+# }
+#
+#
+# def main():
+#     _, command, *args = sys.argv
+#     if command == 'list':
+#         list_files(args)
+#         exit(0)
+#     if command in .commands:
+#         .commands[command](*args)
+#     else:
+#         print('Command not found!')
+#
+#
+# if __name__ == "__main__":
+#     main()
