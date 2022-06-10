@@ -1,3 +1,4 @@
+
 from pathlib import Path
 
 
@@ -8,9 +9,6 @@ def check_command(args):
 
     file_name = Path(args[1]).name
 
-    path = '.zeon_fs2/' + file_name
-
-    if not Path(args[1]).is_file():
+    if not Path(file_name).exists():
         print('Такой файл не существует')
         exit(0)
-
