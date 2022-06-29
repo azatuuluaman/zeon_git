@@ -1,22 +1,18 @@
 import os
 import sys
+import os.path
 
 
-def list_files(*args):
-    path = os.getcwd()
-    dir_name = '.zeon_fs'
-    file_path = os.path.join(path, dir_name)
+def list_files():
+    for address, dirs, files in os.walk('.zeon_git'):
+        print(address,dirs,files)
 
-    dir_files = os.listdir(file_path)
-
-    print('Files: ', len(dir_files))
-
-    for i in dir_files:
-        print(i)
-
+        for name in files:
+            print(os.path.join(address, name))
 
 if __name__ == "__main__":
     args = sys.argv
     if not len(args) < 2:
         exit(0)
-    list_files(sys.argv)
+    list_files()
+
