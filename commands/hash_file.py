@@ -10,5 +10,5 @@ def hash_file(args):
         with open(args[2]) as file:
             data = file.read()
             hash_object = hashlib.md5(data.encode()).hexdigest()
-            print(hash_object)
+            # print(hash_object)
             return hash_object

@@ -36,7 +36,6 @@ if __name__ == "__main__":
         """
         if not len(args) <= 2:
             exit(0)
-        print('list worked')
         list_files()
 
     if args[1] == "init":
