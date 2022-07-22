@@ -6,14 +6,13 @@ def list_files():
     files = {}
 
     with open(".zeon_git/index.txt", "r") as file:
-        for link in file.read().split('\n'):
+        for link in file.read().split('\n')[:-1]:
             elements.append(link.split(':')[0])
-        print(elements)
 
     for element in elements:
         link = files
         for path in element.split('/'):
-            if not path in link:
+            if path not in link:
                 link[path] = {}
             link = link[path]
 
