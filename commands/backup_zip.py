@@ -7,7 +7,6 @@ def backup_zip():
     Архивация содержимого с .zeon_git в archive.zip
     Команда для терминала:  fs backup
     """
-
     fantasy_zip = zipfile.ZipFile('/home/umar/Desktop/zeon_git/archive.zip', 'w')
 
     for folder, subfolders, files in os.walk('/home/umar/Desktop/zeon_git/.zeon_git'):
@@ -16,6 +15,7 @@ def backup_zip():
                                                                           '/home/umar/Desktop/zeon_git/.zeon_git'),
                               compress_type=zipfile.ZIP_DEFLATED)
     print('Архивация содержимого с .zeon_git в archive.zip succesful')
+    fantasy_zip.printdir()
     fantasy_zip.close()
 
 

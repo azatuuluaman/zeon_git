@@ -43,19 +43,3 @@ def hookies_list(args):
         os.system(f'python3 {i}')
 
         # subprocess.call(f'python3 /home/umar/Desktop/zeon_git/hookies/{args[1]}/pre/{i}', shell=True)
-
-
-
-
-    # list_hookies.insert(2, list_hookies_with_dog)
-
-
-
-
-
-    # subprocess.call(f'python3 /home/umar/Desktop/zeon_git/hookies/{args[1]}/pre/{file_name}', shell=True)
-
-    # x = threading.Thread(target=runner(sys.argv[1]), args=(1,))
-    # x.start()
-# x = threading.Thread(target=ls_add[i], args=(1,))
-# x.start()

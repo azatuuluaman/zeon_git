@@ -12,8 +12,6 @@ def restore_zip():
     """
     fantasy_zip = zipfile.ZipFile('/home/umar/Desktop/zeon_git/archive.zip')
     fantasy_zip.extractall('/home/umar/Desktop/zeon_git/temporary_name')
-
-    # print("Разархивация в директорию temporary_name")
     fantasy_zip.close()
     check_restore()
 

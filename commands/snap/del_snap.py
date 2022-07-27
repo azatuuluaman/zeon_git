@@ -1,9 +1,7 @@
 import os.path
-import shutil
 import sys
-import zipfile
 
-PATH_OLD_GIT = '/home/umar/Desktop/zeon_git/.zeon_git'
+PATH_OLD_GIT = '/.zeon_git'
 PATH_SNAP = '/home/umar/Desktop/zeon_git/snapshot/'
 args = sys.argv
 
