@@ -2,7 +2,6 @@ import os.path
 import shutil
 import sys
 import zipfile
-from zipfile import ZipFile
 
 PATH_OLD_GIT = '/home/umar/Desktop/zeon_git/.zeon_git'
 args = sys.argv
