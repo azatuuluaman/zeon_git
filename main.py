@@ -25,14 +25,9 @@ if __name__ == "__main__":
         exit(0)
 
     if args[1] == "list":
-        """
-        Показывает всё содержимое директории .zeon_git 
-        """
         if not len(args) <= 2:
             exit(0)
         list_files()
-        # pre_list()
-
         hookies_list(args)
 
     if args[1] == "init":

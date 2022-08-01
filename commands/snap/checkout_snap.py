@@ -10,39 +10,20 @@ PATH_TO = '/home/umar/Desktop/zeon_git/temp_dir_checkout'
 
 def checkout(args):
     """
-    Разархивация содержимого из указанного файла с каталога snapshot в временную директорию temp_dir_checkout
-    Команда для терминала vs checkout (файл внутри каталога snapshot)
-
-    Разархивация snapshote -> file.zip -> file
+    Разархивация файла из .zeon_git в временную директорию temp_dir_checkout
+    Команда для терминала vs checkout snapshot hash
     """
-    # path_from = f"{PATH}{args[2]}.zip"
-    # from_zip = zipfile.ZipFile(path_from)
-    # from_zip.extractall(PATH_TO)
-    # from_zip.close()
+    archive = f'/home/umar/Desktop/zeon_git/snapshot/{args[2]}.zip'
 
-    # получить информацию из архива zip
-    # zipfile1 = '/home/umar/Desktop/zeon_git/snapshot/archive1.zip'
-    # z = zipfile.ZipFile(zipfile1)
-    # print(z.infolist())
-
-    # извлечь один файл из архива            команда : vs checkout (HASH)
-    archive = '/home/umar/Desktop/zeon_git/snapshot/archive1.zip'
-
-    object = f".zeon_git/objects/{args[2]}"
+    object = f".zeon_git/objects/{args[3]}"
     with zipfile.ZipFile(archive, 'r') as zip_file:
         zip_file.extract(object, '/home/umar/Desktop/zeon_git/temp_dir_checkout')
 
-    # Ошибка KeyError: "There is no item named 'index.txt' in the archive"
-
-
-
-
-
-
-    print(colored('Checkout work!', 'green'))
+    print(colored(f'{args[3]} -> temp_dir_checkout ', 'green'))
 
 
 if __name__ == '__main__':
     checkout(args)
 
-
+# нужно указать не хеш ,а путь который хранится в индексе.
+# конфиги джанго прочитать

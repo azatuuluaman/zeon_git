@@ -27,7 +27,7 @@ if __name__ == "__main__":
         del_snap(args)
 
     elif args[1] == 'list':
-        list_snap()
+        list_snap(args)
 
     elif args[1] == 'checkout':
         checkout(args)
