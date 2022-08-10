@@ -4,7 +4,6 @@ import threading
 from commands.add_file import check_add
 from commands.backup_zip import backup_zip
 from commands.del_file import del_file
-from commands.hash_file import hash_file
 from commands.helper import hookies_list
 from commands.init_fs import init_fs
 from commands.list_files import list_files
@@ -21,7 +20,7 @@ if __name__ == "__main__":
 
     if len(args) == 1:
         print(
-            'Введите правильную команду: \n - fs list \n - fs init \n - fs add something \n - fs delete something \n - fs hash something \n - fs backup something')
+            'Выберите команду дла ФС: \n - fs list -> Показывает содержимое .zeon_git + хуки воспроизведение mp3 \n - fs init -> Создаёт каталог .zeon_git \n - fs add something -> Добавляет в указанный файл в .zeon_git \n - fs delete something -> Удаляет указанный файл с .zeon_git\n - fs backup something')
         exit(0)
 
     if args[1] == "list":
@@ -44,8 +43,6 @@ if __name__ == "__main__":
         del_file(args)
         post_del()
 
-    if args[1] == "hash":
-        hash_file(args)
 
     if args[1] == "backup":
         backup_zip()

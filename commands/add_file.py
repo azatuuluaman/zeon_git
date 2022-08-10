@@ -5,7 +5,6 @@ import sys
 from commands.hash_file import hash_file
 from hookies.add.post.post_add import post_add
 
-
 args = sys.argv
 
 
